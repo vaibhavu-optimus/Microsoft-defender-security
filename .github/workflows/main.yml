@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checkout your code repository to scan
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Run analyzers
       - name: Run Microsoft Security DevOps
@@ -41,7 +41,7 @@ jobs:
 
       # Upload alerts file as a workflow artifact
       - name: Upload alerts file as a workflow artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: alerts
           path: ${{ steps.msdo.outputs.sarifFile }}
